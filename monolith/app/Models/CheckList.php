@@ -16,4 +16,12 @@ class CheckList extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * Returns the items of this list
+     */
+    public function items()
+    {
+        return $this->hasMany(CheckListItem::class);
+    }
 }
