@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * returns a list of check-lists for the user
+     */
+    public function checkLists()
+    {
+        return $this->hasMany(CheckList::class);
+    }
 }
