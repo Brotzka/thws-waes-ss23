@@ -9,6 +9,11 @@ class CheckList extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'user_id'
+    ];
+
     /**
      * Returns the owner of this list
      */
